@@ -1,0 +1,951 @@
+*{
+
+	/* Universal reset: */
+
+	margin:0;
+
+	padding:0;
+
+}
+
+
+
+header,footer,
+
+article,section,
+
+hgroup,nav,
+
+figure{
+
+	/* Giving a display value to the HTML5 rendered elements: */
+
+	display:block;
+
+}
+
+
+
+body{
+
+	/* Setting the default text color, size, page background and a font stack: */
+
+	font-size:0.825em;
+
+	color:#fcfcfc;
+
+	background-color:#355664;
+
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+
+
+
+
+
+/*dropd dwon*/
+
+
+
+
+
+
+
+.clearfix:after {
+
+    display:block;
+
+    clear:both;
+
+}
+
+
+
+ 
+
+.menu {
+
+    width:800px;
+
+    margin:120px auto;
+
+  right:-30px;
+
+
+
+}
+
+ 
+
+
+
+.menu li {
+
+    margin:-20px;
+
+    list-style:none;
+
+    font-family:'Ek Mukta';
+
+}
+
+ 
+
+.menu a {
+
+    transition:all linear 0.15s;
+
+    color:#919191;
+
+}
+
+ 
+
+.menu li:hover > a, .menu .current-item > a {
+
+    text-decoration:none;
+
+    color:#be5b70;
+
+}
+
+ 
+
+.menu .arrow {
+
+    font-size:11px;
+
+    line-height:0%;
+
+}
+
+ 
+
+/*----- Top Level -----*/
+
+.menu > ul > li {
+
+    float:left;
+
+    display:inline-block;
+
+    position:relative;
+
+    font-size:19px;
+
+}
+
+ 
+
+.menu > ul > li > a {
+
+    padding:10px 40px;
+
+    display:inline-block;
+
+    text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+
+}
+
+ 
+
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+
+    background:#2e2728;
+
+}
+
+ 
+
+/*----- Bottom Level -----*/
+
+.menu li:hover .sub-menu {
+
+    z-index:1;
+
+    opacity:1;
+
+}
+
+ 
+
+.sub-menu {
+
+    width:160%;
+
+    padding:5px 0px;
+
+    position:absolute;
+
+    top:100%;
+
+    left:0px;
+
+    z-index:-1;
+
+    opacity:0;
+
+    transition:opacity linear 0.15s;
+
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+
+    background:#2e2728;
+
+}
+
+ 
+
+.sub-menu li {
+
+    display:block;
+
+    font-size:16px;
+
+}
+
+ 
+
+.sub-menu li a {
+
+    padding:10px 30px;
+
+    display:block;
+
+}
+
+ 
+
+.sub-menu li a:hover, .sub-menu .current-item a {
+
+    background:#3e3436;
+
+}
+
+
+
+
+
+
+
+/*Background video*/
+
+
+
+body {
+
+  margin: 0;
+
+  padding: 0;
+
+/*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
+
+  background: #333;
+
+  background-attachment: fixed;
+
+  background-size: cover;
+
+}
+
+
+
+/* The only rule that matters */
+
+#video-background {
+
+/*  making the video fullscreen  */
+
+  position: fixed;
+
+  right: 0; 
+
+  bottom: 0;
+
+  min-width: 100%; 
+
+  min-height: 100%;
+
+
+
+  width: auto; 
+
+  height: auto;
+
+  z-index: -100;
+
+}
+
+
+
+/* These just style the content */
+
+
+
+
+
+h19 {
+
+  position: absolute;
+
+  top: 60%;
+
+  width: 100%;
+
+  font-size: 36px;
+
+  letter-spacing: 3px;
+
+  color: #fff;
+
+  font-family: Oswald, sans-serif;
+
+  text-align: center;
+
+}
+
+
+
+h19 span {
+
+  font-family: sans-serif;
+
+  letter-spacing: 0;
+
+  font-weight: 300;
+
+  font-size: 16px;
+
+  line-height: 24px;
+
+}
+
+
+
+h19 span q {
+
+  color: #fff;
+
+}
+
+
+
+
+
+
+
+/* css animation*/
+
+
+
+
+
+p{
+
+  color: white; 
+
+  font-family: "Courier";
+
+  font-size: 40px;
+
+  margin: 10px 0 0 10px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  width: 30em;
+
+  animation: type 4s steps(60, end); 
+
+}
+
+
+
+
+
+span{
+
+  animation: blink 1s infinite;
+
+}
+
+
+
+@keyframes type{ 
+
+  from { width: 0; } 
+
+} 
+
+
+
+@keyframes type2{
+
+  0%{width: 0;}
+
+  50%{width: 0;}
+
+  100%{ width: 100; } 
+
+} 
+
+
+
+@keyframes blink{
+
+  to{opacity: .0;}
+
+}
+
+
+
+::selection{
+
+  background: none;
+
+}
+
+
+
+
+
+/* Hyperlink Styles: */
+
+
+
+a, a:visited {
+
+	color:#0196e3;
+
+	text-decoration:none;
+
+	outline:none;
+
+}
+
+
+
+a:hover{
+
+	text-decoration:underline;
+
+}
+
+
+
+a img{
+
+	border:none;
+
+}
+
+
+
+
+
+
+
+
+
+/* Headings: */
+
+
+
+h1,h2,h3{
+
+	font-family:"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+
+	text-shadow:0 1px 1px black;
+
+}
+
+
+
+h1{
+
+	/* The logo text */
+
+	font-size:3.5em;
+
+	padding:0.5em 0 0;
+
+  text-transform: capitalize;
+
+}
+
+
+
+h3{
+
+	/* The logo text */	
+
+	padding:0.5em
+
+  text-transform: capitalize;
+
+}
+
+
+
+h2{
+
+	font-size:2.2em;
+
+	font-weight:normal;
+
+	letter-spacing:0.01em;
+
+  text-transform: capitalize;
+
+}
+
+
+
+h3{
+
+	/* The slogan text */
+
+	font-family:forte,"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+
+	font-size:2em;
+
+	font-weight:normal;
+
+	margin:0 0 1em;
+
+}
+
+
+
+.title-right {
+
+    float: right;
+
+}
+
+
+
+
+
+
+
+p{
+
+	line-height:1.5em;
+
+	padding-bottom:1em;
+
+}
+
+
+
+.line{
+
+	/* The dividing line: */
+
+	height:1px;
+
+	background-color:#24404c;
+
+	border-bottom:1px solid #416371;
+
+	margin:1em 0;
+
+	overflow:hidden;
+
+}
+
+
+
+article .line{
+
+	/* The dividing line inside of the article is darker: */
+
+	background-color:#15242a;
+
+	border-bottom-color:#204656;
+
+	margin:1.3em 0;
+
+}
+
+
+
+footer .line{
+
+	margin:2em 0;
+
+}
+
+
+
+nav{
+
+	background:url(img/gradient_light.jpg) repeat-x 50% 50% #f8f8f8;
+
+	padding:0 5px;
+
+	position:absolute;
+
+	right:0;
+
+	top:4em;
+
+	
+
+	border:1px solid #FCFCFC;
+
+
+
+	-moz-box-shadow:0 1px 1px #333333;
+
+	-webkit-box-shadow:0 1px 1px #333333;
+
+	box-shadow:0 1px 1px #333333;
+
+}
+
+
+
+/* The clearfix hack to clear the floats: */
+
+
+
+.clear:after{
+
+	content: ".";
+
+	display: block;
+
+	height: 0;
+
+	clear: both;
+
+	visibility: hidden;
+
+}
+
+
+
+/* The navigation styling: */
+
+
+
+nav ul li{
+
+	display:inline;
+
+}
+
+
+
+nav ul li a,
+
+nav ul li a:visited{
+
+	color:#565656;
+
+	display:block;
+
+	float:left;
+
+	font-size:1.25em;
+
+	font-weight:bold;
+
+	margin:5px 2px;
+
+	padding:7px 10px 4px;
+
+	text-shadow:0 1px 1px white;
+
+	text-transform:uppercase;
+
+}
+
+
+
+
+
+.image { 
+
+   position: relative; 
+
+   width: 100%; /* for IE 6 */
+
+}
+
+
+
+h4 { 
+
+   position:relative; 
+
+   left: 0;
+
+   width: 100%; 
+
+font-size:1.5em;
+
+bottom : 1.80em; 
+
+color:white
+
+}
+
+
+
+nav ul li a:hover{
+
+	text-decoration:none;
+
+	background-color:#FFD433;
+
+}
+
+
+
+nav, article, nav ul li a,figure{
+
+	/* Applying CSS3 rounded corners: */
+
+	-moz-border-radius:10px;
+
+	-webkit-border-radius:10px;
+
+	border-radius:10px;
+
+}
+
+
+
+/* Article styles: */
+
+
+
+#page{
+
+	width:960px;
+
+	margin:0 auto;
+
+	position:relative;
+
+}
+
+
+
+article{
+
+	background-color:#213E4A;
+
+	margin:3em 0;
+
+	padding:20px;
+
+	
+
+	text-shadow:0 2px 0 black;
+
+}
+
+
+
+img.centeredImage{
+
+
+
+    position: absolute;
+
+    margin: auto;
+
+    left: 0; 
+
+    right: 0;
+
+    top: 0;
+
+    bottom: 0;  
+
+}
+
+
+
+
+
+figure{
+
+	border:3px solid #142830;
+
+	float:right;
+
+	height:300px;
+
+	margin-left:15px;
+
+	overflow:hidden;
+
+	width:400px;
+
+}
+
+
+
+figure10{
+
+	border:3px solid #142830;
+
+	float:left;
+
+	height:300px;
+
+	margin-left:15px;
+
+	overflow:hidden;
+
+	width:400px;
+
+
+
+}
+
+
+
+figure2{
+
+	border:3px solid #142830;
+
+	float:left;
+
+	height:300px;
+
+	margin-left:15px;
+
+	overflow:hidden;
+
+	width:400px;
+
+
+
+}
+
+
+
+figure3{
+
+	border:3px solid #142830;
+
+	float:right;
+
+	height:300px;
+
+	margin-left:15px;
+
+	overflow:hidden;
+
+	width:400px;
+
+
+
+}
+
+
+
+
+
+
+
+figure:hover{
+
+	-moz-box-shadow:0 0 2px #4D7788;
+
+	-webkit-box-shadow:0 0 2px #4D7788;
+
+	box-shadow:0 0 2px #4D7788;
+
+}
+
+
+
+figure img{
+
+	margin-left:-60px;
+
+}
+
+
+
+/* Footer styling: */
+
+
+
+footer{
+
+	margin-bottom:30px;
+
+	text-align:center;
+
+	font-size:1.5em;
+
+}
+
+
+
+
+
+footer p{
+
+	margin-bottom:-2.5em;
+
+	position:relative;
+
+font-size:1.5em;
+
+}
+
+
+
+footer a,footer a:visited{
+
+	color:#cccccc;
+
+	background-color:#213e4a;
+
+	display:block;
+
+	padding:2px 4px;
+
+	z-index:100;
+
+	position:relative;
+
+}
+
+
+
+footer a:hover{
+
+	text-decoration:none;
+
+	background-color:#142830;
+
+}
+
+
+
+footer a.by{
+
+	float:left;
+
+
+
+}
+
+
+
+footer a.up{
+
+	float:right;
+
+}
