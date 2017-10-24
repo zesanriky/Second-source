@@ -102,7 +102,7 @@
             </header>
 
 
-           <li><h2><a href="/uploads/form.php" style="float: right;color:Yellow;">send feedback</h2></a></li>              
+           <li><h2><a href="uploads/form.php" style="float: right;color:Yellow;">send feedback</h2></a></li>              
             <section id="articles"> <!-- A new section with the articles -->
 
 				<!-- Article 1 start -->
@@ -183,7 +183,7 @@
                     <div class="articleBody clear">
 
                     	<figure2>
-	                    	<a href="http://hcc.uni-bremen.de/"><img src="/uploads/g.jpg" width="415" height="340" /></a>
+	                    	<a href="http://hcc.uni-bremen.de/"><img src="uploads/g.jpg" width="415" height="340" /></a>
                         </figure2>
                         
         
