@@ -11,6 +11,9 @@ For launching every java projects,
 
 - To run -> Transparens.java -> create a class -> Test 
 
+- To run -> first.java -> create a class -> first 
+
+- To run -> ArkaPlanPanel.java -> create a class ->ArkaPlanPanel and the iamge is uploaded by name "ai-image.png"
   
 
 Finally run in eclipes (latest version) or any other updated compiler.
