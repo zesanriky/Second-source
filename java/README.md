@@ -10,7 +10,8 @@ For launching every java projects,
 - To run -> GUIchat.java -> create a class -> GUIChat
 
 - To run -> Transparens.java -> create a class -> Test 
+
   
 
-Finally run in eclipes (latest version) or any other updated compiler compiler.
+Finally run in eclipes (latest version) or any other updated compiler.
 
