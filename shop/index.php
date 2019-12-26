@@ -58,7 +58,6 @@ tr:nth-child(even) {
 <h3>Note: Maximum capacity per packet is 50 KG</h3>
 </table>
 
-
 <form method="post" action="">
 <input type="number" name="value">
 <input type="submit">
@@ -67,18 +66,9 @@ tr:nth-child(even) {
 </body>
 </html>
 
-
 <?php
 
-
-// Items wight
-
-
-// Items shipping price per weight
-
-
 function cost() {
-
 
 // Shipping costs
 
@@ -96,14 +86,11 @@ $ArtikelC=10;
 $ArtikelD=50;
 $ArtikelE=30;
 
-
-if ($_POST['value'] == 11){
-
+if ($_POST['value'] == 1){
 
 echo " \n  \n Article A is added in the basket";
 
-file_put_contents("/var/www/html/shop/A.txt"," $ArtikelA KG Artikel A is added in the basket, \n  \n  shipping charge is $shipping1 Euro " );
-
+file_put_contents("/var/www/html/A.txt"," $ArtikelA KG Artikel A is added in the basket, \n  \n  shipping charge is $shipping1 Euro " );
 
 //for($i=1;$i<$_POST['value'];$i++)
 
@@ -115,18 +102,13 @@ file_put_contents("/var/www/html/shop/A.txt"," $ArtikelA KG Artikel A is added i
 
 //use count file function to calculate the sum for the same article
 
-
 }else {
 
 $shipping1 = 0;
 
 }
-
-
 // Multiple order
 //echo copy("/var/www/html/A.txt","/var/www/html/A1.txt");
-
-
 
 if ($_POST['value'] == 2){
 
@@ -139,9 +121,7 @@ file_put_contents("/var/www/html/B.txt"," $ArtikelB KG Artikel B is added in the
 
 $shipping2 = 0;
 
-
 }
-
 
 if($_POST['value']  == 3){
 
@@ -150,17 +130,13 @@ echo "Article C is added in the basket";
 
 file_put_contents("/var/www/html/C.txt"," $ArtikelC KG Artikel C is added in the basket, \n  \n  shipping charge is $shipping3 Euro " );
 
-
 }else {
 
 $shipping3 = 0;
 
-
 }
 
 if ($_POST['value']  == 4){
-
-
 echo " \n  \n Article D is added in the basket";
 
 file_put_contents("/var/www/html/D.txt"," $ArtikelD KG Artikel D is added in the basket, \n  \n  shipping charge is $shipping4 Euro " );
@@ -168,11 +144,7 @@ file_put_contents("/var/www/html/D.txt"," $ArtikelD KG Artikel D is added in the
 }else {
 
 $shipping4 = 0;
-
-
 }
- 
-
 if ($_POST['value'] == 5){
 
 echo " \n  \n Article E is added in the basket";
@@ -186,12 +158,7 @@ $shipping5 = 0;
 
 }
 
-
-
 // Combination
-
-
-
 if ($_POST['value'] == 6) {
 
 
@@ -201,25 +168,16 @@ echo "You combine like '12' or '23' or '13' but in reverse direction like '21' o
 
 }
 
-
 // cc combining
 
 if ($_POST['value'] == 33){
-
-
 $sumae = $ArtikelC+$ArtikelC;
-
-
 if ($sumae<=20)
-
 { 
-
-
 $shipping1=16;
 
 echo "shipping wight is accpeted" ;
 echo "Article C+E are combined in the basket";
-
 file_put_contents("/var/www/html/cc.ctxt","$sumae KG Artikel are added in the basket,\n  \n  shipping charge is $shipping1 Euro ");
 
 echo "Which Articles you would like to keep single? choose the articles number like '101' or '202' or '303' or '404' or '505' ";
@@ -227,11 +185,9 @@ echo "Which Articles you would like to keep single? choose the articles number l
 
 }}
 
-
 else {
 
 $shipping1 = 0;
-
 
 }
 
@@ -239,14 +195,11 @@ $shipping1 = 0;
 
 if ($_POST['value'] == 35){
 
-
 $sumae = $ArtikelC+$ArtikelE;
-
 
 if ($sumae<=40)
 
 { 
-
 
 $shipping2=16;
 
@@ -257,30 +210,23 @@ file_put_contents("/var/www/html/ce.ctxt","$sumae KG Artikel are added in the ba
 
 echo "Which Articles you would like to keep single? choose the articles number like '101' or '202' or '303' or '404' or '505' ";
 
-
 }}
-
 
 else {
 
 $shipping2 = 0;
 
-
 }
-
 
 // ae combining
 
 if ($_POST['value'] == '15'){
 
-
 $sumae = $ArtikelA+$ArtikelE;
-
 
 if ($sumae>40 && $sumae<=50)
 
 { 
-
 
 $shipping4=20;
 
@@ -291,25 +237,18 @@ file_put_contents("/var/www/html/ae.ctxt","$sumae KG Artikel are added in the ba
 
 echo "Which Articles you would like to keep single? choose the articles number like '101' or '202' or '303' or '404' or '505' ";
 
-
 }}
-
 
 else {
 
 $shipping4 = 0;
 
-
 }
-
-
 // abc combining
 
 if ($_POST['value'] == 123){
 
-
 $sumae = $ArtikelA+$ArtikelB+$ArtikelC;
-
 
 if ($sumae>50)
 
@@ -319,42 +258,30 @@ echo "$sumae KG";
 
 echo "Sorry wight per paket is max 50 KG, try again";
 
-
 }
 
 }
-
-
 // abd combining
 
 if ($_POST['value'] == '124'){
-
-
 $sumae = $ArtikelA+$ArtikelB+$ArtikelD;
 
-
 if ($sumae>50)
-
 { 
 
 echo "$sumae KG";
 
 echo "Sorry wight per paket is 50 KG, try again";
 
-
 }
 }
-
 // bc combining
 
 if ($_POST['value'] == '23'){
 
-
 $sumae = $ArtikelB+$ArtikelC;
 
-
 if ($sumae<=50)
-
 { 
 
 echo "$sumae KG";
@@ -374,25 +301,17 @@ echo "Which Articles you would like to keep single? choose the articles number l
 else {
 
 $shipping4 = 0;
-
 }
-
-
 // ace combining
 
 if ($_POST['value'] == '13'){
 
-
 $sumae = $ArtikelA+$ArtikelC;
-
-
 
 if ($sumae<=30)
 
 { 
-
 echo "$sumae KG";
-
 $shipping5=12;
 
 echo "shipping wight is accpeted" ;
@@ -413,9 +332,7 @@ $shipping5 = 0;
 
 }
 
-
-
-////////////////
+// Adding single items
 
 if ($_POST['value']==101)
 
@@ -427,15 +344,12 @@ echo "Article A is added with the combined Article";
 
 file_put_contents("/var/www/html/a.ctxt","$sumae KG Artikel are added in the basket,\n  \n  shipping charge is $shipping11 Euro ");
 
-
 }
-
 else {
 
 $shipping11 = 0;
 
 }
-
 
 if ($_POST['value']==202)
 
@@ -451,17 +365,14 @@ file_put_contents("/var/www/html/b.ctxt","$sumae KG Artikel are added in the bas
 }
 
 else {
-
 $shipping22 = 0;
 
 }
 
-
 if ($_POST['value']==303)
 
 { 
-
-  //  echo "The file $filename3 exists";
+//  echo "The file $filename3 exists";
 
 echo "Article C is added with the combined Article";
 
@@ -473,13 +384,10 @@ file_put_contents("/var/www/html/c.ctxt","$sumae KG Artikel are added in the bas
 }
 
 else {
-
 $shipping33 = 0;
 
 }
-
 if ($_POST['value']==404)
-
 { 
 
 echo "Article D is added with the combined Article";
@@ -488,17 +396,14 @@ $shipping44=20;
 
 file_put_contents("/var/www/html/d.ctxt","$sumae KG Artikel are added in the basket,\n  \n  shipping charge is $shipping44 Euro ");
 
-
 }
 
 else {
 
 $shipping44 = 0;
-
 }
 
 if ($_POST['value']==505)
-
 { 
 
 echo "Article E is added with the combined Article";
@@ -511,25 +416,19 @@ file_put_contents("/var/www/html/e.ctxt","$sumae KG Artikel are added in the bas
 }
 
 else {
-
 $shipping55 = 0;
 
 }
 
-
-////////////////
 //items_in_basket_af();
 
 //$sum = $shipping1 + $shipping2 + $shipping3 + $shipping4 + $shipping5;
 
 //echo "Total Price $sum €";
 
-
 // Before combining sum up
 
-
 if ($_POST['value'] == '7'){
-
 
 items_in_basket();
 
@@ -556,7 +455,6 @@ $shipping2=16 ;
     $shipping2 = 0;
 }
 
-
 $filename = '/var/www/html/C.txt';
 
 if (file_exists($filename)) {
@@ -568,7 +466,6 @@ $shipping3=5 ;
 }else {
     $shipping3 = 0;
 }
-
 
 $filename = '/var/www/html/D.txt';
 
@@ -600,25 +497,15 @@ echo "Total Price $sum €";
 
 }
 
-
-
 //else {
 //    echo "The file $filename does not exist";
 //}
-
 //$count = count($_POST['member']); 
-
 //echo $count;
-
-
 //file_put_contents("sum.txt", "Total Price $sum €");
-
-
-
 // After combining sum up
 
 if ($_POST['value'] == '8'){
-
 
 items_in_basket_af();
 
@@ -645,7 +532,6 @@ $shipping2=16 ;
     $shipping2 = 0;
 }
 
-
 $filename = '/var/www/html/ae.ctxt';
 
 if (file_exists($filename)) {
@@ -657,7 +543,6 @@ $shipping4=20 ;
 }else {
     $shipping4 = 0;
 }
-
 
 $filename = '/var/www/html/bc.ctxt';
 
@@ -676,13 +561,11 @@ $filename = '/var/www/html/ac.ctxt';
 if (file_exists($filename)) {
 
   //  echo "The file $filename3 exists";
-
 $shipping5=12 ;
 
 }else {
     $shipping5 = 0;
 }
-
 
 // Single items
 
@@ -709,7 +592,6 @@ $shipping22=16 ;
     $shipping22 = 0;
 }
 
-
 $filename = '/var/www/html/c.ctxt';
 
 if (file_exists($filename)) {
@@ -721,7 +603,6 @@ $shipping33=20 ;
 }else {
     $shipping33 = 0;
 }
-
 
 $filename = '/var/www/html/d.ctxt';
 
@@ -755,7 +636,6 @@ $sum_final = $sum1+$sum2;
 echo "Total Price $sum_final €";
 
 }
-
 // quit
 
 if ($_POST['value'] == '9'){
@@ -763,9 +643,7 @@ if ($_POST['value'] == '9'){
 exit("Thanks for visiting our shop");
 
 }
-
 // Items in the Basket
-
 
 function items_in_basket()
 
@@ -806,12 +684,9 @@ function items_in_basket_af()
 }
 
 //$i = 0;
-
 //do {
-
 //menue();
 cost();
-
 //} while ($i == 0);
 
 ?>
