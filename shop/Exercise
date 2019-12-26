@@ -1,0 +1,33 @@
+You can make just locally (simple PHP files or functions / no shop / framework structure)
+
+
+
+Task 1: (baking)
+
+
+Objective: To determine the number of stages of the packages for shipment with optimal prices for products with different weight and packages price.
+
+Here is a MAX weight per package and must not be exceeded.
+
+
+Example:
+
+MAX package weight is 50 kg
+Prices:
+Packages up to 10 kg => 5 €
+Parcels up to 20 kg => 9 €
+Packages up to 30 kg => 12 €
+Packages up to 40 kg => 16 €
+Packages up to 50 kg => 20 €
+4 Articles in basket with:
+Product A has 20 kg
+Product B has 40 kg
+Item C has 10 kg
+Article D has 50 kg
+The function is to deliver these results:
+
+Total: 3 packages
+1 package for Article D => 20 €
+1 package for product A + C => 12 €
+1 package for product B => 16 €
+Total price: 48 €
