@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}index{% endblock %}
+
+{% block body %}
+    <h1>index</h1>
+
+     {% if is_granted('ROLE_USER') %}
+         You are a user only not admin
+         <a href=" {{ path('logout') }}">logout</a>
+         <br />
+        {% if is_granted('ROLE_ADMIN') %}
+
+            <a href=" {{ path('user_index') }}"> Manage users according to your choices </a>
+
+        {% endif%}
+
+     {% else %}
+         You are not logged
+         <a href=" {{ path('login') }}">login</a>
+     {% endif %}
+
+{% endblock %}
