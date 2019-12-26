@@ -1,0 +1,244 @@
+
+
+
+/*https://codepen.io/anon/pen/QqEemv */
+
+/*https://codepen.io/anon/pen/EwyqEe */
+
+/* www.agrohorizon.com */
+
+/*https://daneden.github.io/animate.css*/
+
+body{
+    width: 100%;
+  height: 100%;
+  
+    overflow-x: hidden;
+}
+
+.spinner{
+    width: 80px;
+    height: 80px;
+    
+    border: 2px solid #f3f3f3;
+    border-top:3px solid #f25a41;
+    border-radius: 100%;
+    
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+#overlay{
+  height:100%;
+  width:100%;
+  background:rgba(0, 0, 0, 1);
+  position:fixed;
+  left:0;
+  top:0;
+ }
+
+
+
+k { 
+  margin-left: 40px;
+ background-color: #097cd0;
+}
+
+
+body, html, .main {
+    height: 100%;
+}
+
+section {
+    min-height: 100%;
+}
+
+
+/* http://c8.alamy.com/comp/J1DYJY/modern-laboratory-equipment-set-of-different-glassware-on-blue-background-J1DYJY.jpg 
+https://www.walldevil.com/wallpapers/a79/scenery-desktop-natural-beautiful-sunlight-through-trees-wallpaper-wallpapers.jpg
+http://lemerg.com/data/wallpapers/27/664200.jpg
+*/
+
+#Wrapper{
+    background:url('ch.jpg '); 
+    width:100%; 
+    height:100%;
+}
+
+#Content{
+    background-color:rgba(200,200,50,.4); 
+    width:100%; 
+    height:100%;
+}
+
+
+body {margin:0;}
+
+.topnav {
+  overflow: hidden;
+  background-color:#0e344f;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+.topnav a:hover {
+  background-color:#097cd0;
+  color: black;
+
+}
+
+
+/*
+
+.bottomnav {
+margin: 0 200px;
+width:10%;
+  overflow: hidden;
+  background-color:#886A08;
+  position:fixed;// scrolling doesn't work
+}
+
+
+*/
+
+body {margin:0;}
+
+.bottomnav {
+  margin: 0 auto;
+bottom:0;
+  overflow: hidden;
+  background-color: #0e344f;
+  position: center;
+  width: 20%;
+}
+
+.bottomnav a {
+  float:center;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+.bottomnav a:hover {
+  background-color: #097cd0;
+  color: black;
+
+}
+
+
+
+
+#video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 50%;
+    min-height: 50%;
+    width: auto;
+    height: auto;
+}
+
+
+
+
+/* Animation*/
+
+.text-effect {
+    overflow: hidden;
+    position: relative;
+    filter: contrast(110%) brightness(80%);
+}
+
+.Special Lecithins for Special Applications {
+    position: relative;
+    background: blue;
+    color: transparent;
+}
+
+.Special Lecithins for Special Applications::before, .Special Lecithins for Special Applications::after {
+    content: attr(data-text);
+    color: white;
+    filter: blur(0.02em);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.Special Lecithins for Special Applications::after {
+    mix-blend-mode: difference;
+}
+
+.gradient,
+.spotlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.gradient {
+    background: linear-gradient(45deg, lightblue, blue);
+    mix-blend-mode: multiply;
+}
+
+.spotlight {
+    animation: light 5s infinite linear;
+    background: radial-gradient(circle, white, transparent 25%) 0 0/25% 25%, radial-gradient(circle, white, black 25%) 50% 50%/12.5% 12.5%;
+    top: -100%;
+    left: -100%;
+    mix-blend-mode: color-dodge;
+}
+
+@keyframes light {
+    100% {
+        transform: translate3d(50%, 50%, 0);
+    }
+}
+
+.Special Lecithins for Special Applications {
+    font: 100 20px 'Lato', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+}
+
+.Special Lecithins for Special Applications:focus {
+    outline: none;
+    border: 1px dotted white;
+}
+
+
+
+

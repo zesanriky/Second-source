@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>Botswana</title>
+
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />	
+
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script> 
+
+	<script type="text/javascript" src="bots/bot.js"></script> 
+
+	<script type="text/javascript" src="rulesets/default.js"></script> 
+
+	<script type="text/javascript" src="js/server.js"></script> 
+	<script type="text/javascript" src="js/botswana.js"></script> 
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="group">
+				<label>Team 1 script</label>
+				<input type="text" name="bot1_url" id="bot1_url" placeholder="URL" value="bots/destroyer.js" />
+			</div>
+
+			<div class="group">
+				<label>Team 2 script</label>
+				<input type="text" name="bot2_url" id="bot2_url" placeholder="URL" value="bots/crusher.js" />
+			</div>
+
+			<div class="group ruleset">
+				<label>Ruleset script</label>
+				<input type="text" name="ruleset_url" id="ruleset_url" placeholder="URL" value="rulesets/default.js" />
+			</div>
+
+			<input type="button" id="go_button" name="go_button" value="Start Tournament" />
+		</div>
+	</header>
+
+	<section id="main">
+		<div class="container">
+			<section id="status">
+				<div class="left" id="bot1status">
+					<span class="name">Team 1</span>
+					<span class="healthbar"><span class="health"></span></span>
+				</div>
+
+				<div class="right" id="bot2status">
+					<span class="name">Team 2</span>
+					<span class="healthbar"><span class="health"></span></span>
+				</div>
+			</section>
+
+			<section id="wrapper">
+				<canvas width="1000" height="600" id="canvas" />
+			</section>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			By <a href="http://bencrowder.net/">Ben Crowder</a> and <a href="http://chadgh.com/">Chad Hansen</a>.
+		</div>
+	</footer>
+</body>
+
+</html>
